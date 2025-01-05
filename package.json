@@ -4,10 +4,11 @@
   "description": "Overview\r This system is a web-based API that enables teachers to manage administrative functions for their students. Teachers and students are uniquely identified by their email addresses. The API will be developed using Node.js, TypeScript,  with modern practices such as RESTful principles and secure data handling.",
   "main": "index.js",
   "scripts": {
-  "start": "node dist/index.js",
-  "dev": "nodemon src/index.ts",
-  "build": "tsc"
-},
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "test": "jest --runInBand"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,8 +19,13 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.10.5",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
     "nodemon": "^3.1.9",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
   }
