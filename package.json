@@ -1,0 +1,26 @@
+{
+  "name": "schoolmgmt",
+  "version": "1.0.0",
+  "description": "Overview\r This system is a web-based API that enables teachers to manage administrative functions for their students. Teachers and students are uniquely identified by their email addresses. The API will be developed using Node.js, TypeScript,  with modern practices such as RESTful principles and secure data handling.",
+  "main": "index.js",
+  "scripts": {
+  "start": "node dist/index.js",
+  "dev": "nodemon src/index.ts",
+  "build": "tsc"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
