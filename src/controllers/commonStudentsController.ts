@@ -21,7 +21,7 @@ export const getCommonStudents = async (req: Request, res: Response): Promise<Re
     );
 
     if ((teachers as any[]).length !== teacherEmailArray.length) {
-      return res.status(404).json({ message: 'One or more teacher emails not found' });
+      return res.status(500).json({ message: 'One or more teacher emails not found' });
     }
 
     const teacherIds = (teachers as any[]).map((teacher) => teacher.teacher_id);
