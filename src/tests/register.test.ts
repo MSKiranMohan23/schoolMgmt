@@ -1,8 +1,7 @@
 import request from "supertest";
 import app from "../app";
-import { getRegisteredStudents } from "../services/registerService";
 
-describe("POST /api/register", () => {
+describe("Register Controller for api/register", () => {
   it("should register students to a teacher and return 204 status", async () => {
     const response = await request(app)
       .post("/api/register")
@@ -13,9 +12,6 @@ describe("POST /api/register", () => {
       .set("Content-Type", "application/json");
 
     expect(response.status).toBe(204);
-    // expect(response.body.message).toBe(
-    //   `Students are registered to teacherken@gmail.com`
-    // ); 
   });
 
   it("should return 400 if request body is invalid", async () => {
@@ -33,13 +29,6 @@ describe("POST /api/register", () => {
   });
 
   it("should return 500 if there is an internal error", async () => {
-    // Simulate an error in the service
-    // jest
-    //   .spyOn(require('../src/services/registerService'), 'registerTeacherWithStudents')
-    //   .mockImplementation(() => {
-    //     throw new Error('Simulated error');
-    //   });
-
     const response = await request(app)
       .post("/api/register")
       .send({
