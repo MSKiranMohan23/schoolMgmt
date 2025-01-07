@@ -4,10 +4,10 @@ Overview
 This system is a web-based API that enables teachers to manage administrative functions for their students. Teachers and students are uniquely identified by their email addresses. The API will be developed using Node.js, TypeScript,  with modern practices such as RESTful principles and secure data handling.
 
 ## Technologies used
-    a. NodeJs<br />
-    b. ExpressJs : ^4.21.2<br />
-    c. TypeScript<br />
-    d. MySQL<br />
+    a. NodeJs
+    b. ExpressJs : ^4.21.2
+    c. TypeScript
+    d. MySQL
 
 ## Unit tests  
 Unit tests are written by using 'Jest' and 'supertest'.
