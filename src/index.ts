@@ -6,6 +6,9 @@ import dotenv from "dotenv";
 import db from "./config/db";
 
 import registerRoutes from "./routes/registerRoutes";
+import commonStudentsRoutes from "./routes/commonStudentsRoutes";
+import suspendRoutes from "./routes/suspendRoutes";
+import notificationRoutes from "./routes/notificationRoutes";
 
 // Load environment variables from .env file
 dotenv.config();
@@ -32,6 +35,9 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded data
 
 // Routes
 app.use("/api", registerRoutes);
+app.use("/api", commonStudentsRoutes);
+app.use("/api", suspendRoutes);
+app.use("/api", notificationRoutes);
 
 // Health Check Endpoint
 app.get("/health", (req: Request, res: Response) => {
@@ -51,5 +57,3 @@ const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-
-export default app;
